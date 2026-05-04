@@ -1,0 +1,16 @@
+[Unit]
+Description=LLama.cpp Server (PagedAttention)
+After=network.target
+
+[Service]
+Type=simple
+User=tomlee
+WorkingDirectory=/home/tomlee/code/llama.cpp
+Environment=LLAMA_USE_PAGED_KV=1
+Environment=LLAMA_KV_BLOCKS=512
+ExecStart=/home/tomlee/code/llama.cpp/build/bin/llama-server -m /home/tomlee/models/Qwen3.6-27B-UD-Q4_K_XL.gguf -c 98304 --batch-size 512 --threads 8 --threads-batch 4 --temp 0.6 --repeat-penalty 1.05 --context-shift --cache-idle-slots -ngl 999 --host 0.0.0.0 --port 8080 --api-key not-needed
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

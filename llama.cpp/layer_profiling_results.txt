@@ -1,0 +1,4 @@
+=== Layer Profiling for Cost Model ===
+Model: /home/tomlee/models/Qwen2.5-7B-Q3_K_M.gguf
+
+--- Testing with -ngl 0 ---

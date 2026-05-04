@@ -1,0 +1,25 @@
+# OpenCode
+.opencode/
+
+# Build artifacts
+*.o
+*.so
+*.a
+*.exe
+build/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+venv/
+.env
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
